@@ -38,7 +38,13 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HomeController{
+            let vc = segue.destination as? HomeController
+//            vc?.username = "isa"
+            
+        }
+    }
 
 }
 

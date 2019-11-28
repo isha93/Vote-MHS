@@ -71,7 +71,7 @@
         <!--Item 2-->
         <scene sceneID="Zu8-dV-M45">
             <objects>
-                <viewController id="bT6-Fw-rpa" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="bT6-Fw-rpa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eaM-Lw-AD3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,23 +87,47 @@
         <!--Item 1-->
         <scene sceneID="JRB-Ql-h42">
             <objects>
-                <viewController id="eNM-xM-gfh" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eNM-xM-gfh" customClass="VoteController" customModule="vote_mhs_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Llh-lf-ced">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp9-b4-IZv">
+                                <rect key="frame" x="184" y="373" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="voteBtn:" destination="eNM-xM-gfh" eventType="touchUpInside" id="wS3-yN-aOt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-VN-zWA">
+                                <rect key="frame" x="186" y="184" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8cP-VN-zWA" firstAttribute="centerX" secondItem="vp9-b4-IZv" secondAttribute="centerX" id="Idp-TD-V2T"/>
+                            <constraint firstItem="8cP-VN-zWA" firstAttribute="top" secondItem="eoE-8j-JSZ" secondAttribute="top" constant="184" id="aQf-iZ-GTg"/>
+                            <constraint firstItem="eoE-8j-JSZ" firstAttribute="bottom" secondItem="vp9-b4-IZv" secondAttribute="bottom" constant="356" id="kPM-DE-BTj"/>
+                            <constraint firstItem="8cP-VN-zWA" firstAttribute="centerX" secondItem="Llh-lf-ced" secondAttribute="centerX" id="mhL-bM-BXx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eoE-8j-JSZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Ngb-Hf-o4D"/>
+                    <connections>
+                        <outlet property="point" destination="8cP-VN-zWA" id="SzH-AQ-9Nm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h1-Kp-sTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1922" y="-639"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Controller-->
         <scene sceneID="Dmu-HX-cLM">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="6LX-h7-Qal" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="6LX-h7-Qal" customClass="HomeController" customModule="vote_mhs_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rMS-5V-rT1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dk3-c1-flz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

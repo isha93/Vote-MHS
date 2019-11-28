@@ -8,10 +8,14 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class HomeController: UITabBarController {
+    var username : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HELO")
+//        let values = [ "Place" : 10]
+        let rootRef = Database.database().reference().root.child("candidate").updateChildValues([ "totalVote": 20])
+        
     }
 }
