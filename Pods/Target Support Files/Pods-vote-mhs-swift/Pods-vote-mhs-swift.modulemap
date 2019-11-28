@@ -1,0 +1,6 @@
+framework module Pods_vote_mhs_swift {
+  umbrella header "Pods-vote-mhs-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
